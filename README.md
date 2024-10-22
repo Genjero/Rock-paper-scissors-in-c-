@@ -1,1 +1,1 @@
-# Rock-paper-scissors-in-c-
+# Rock-paper-scissors-in-cpp
