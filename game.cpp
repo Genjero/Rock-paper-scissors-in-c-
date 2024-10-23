@@ -38,8 +38,7 @@ void start() {
   // Ask for play or not
   char play{};
   do {
-    std::cout << "******************************************\n"
-              << '\n'
+    std::cout << "******************************************\n\n"
               << "Welcome to Rock, Paper,and scissors game\n\n"
               << "Press y to start or q to quit " << "\n\n"
               << "******************************************\n";
@@ -52,4 +51,26 @@ void start() {
     std::cout << "\nRock, paper, scissors game is Start!\n";
 
   } while (play != 'y' && play != 'Y');
+}
+
+bool restartGame() {
+  char response{};
+  bool play{false};
+  do {
+    std::cout << "\nDo you want to play again? (y/n)";
+    std::cin >> response;
+
+    // if (response == 'n' || response == 'N') {
+    //
+    //   std::cout << "K bye\n";
+    //   exit(EXIT_FAILURE);
+    // }
+
+  } while (response != 'y' && response != 'Y' && response != 'n' &&
+           response != 'N');
+  if (response == 'y' || response == 'Y') {
+    play = true;
+  }
+
+  return play;
 }

@@ -6,8 +6,9 @@ char getUserChoice() {
   char player{};
   // make sure player type r, p, or s other than that this gonna loop
   do {
-    std::cout << "   Choose rock, paper, or scissors\n"
-              << "======================================\n";
+    std::cout << "\n======================================\n\n"
+              << "   Choose rock, paper, or scissors\n\n"
+              << "======================================\n\n";
     std::cout << "press r for rock\n";
     std::cout << "press p for paper\n";
     std::cout << "press s for scissors\n";

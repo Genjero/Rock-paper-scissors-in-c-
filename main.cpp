@@ -3,27 +3,33 @@
 #include <iostream>
 
 // Foerward declaration
-void start();
-char getComp();
-char getUserChoice();
-void showChoice(char);
-void winner(char, char);
+// void start();
+// char getComp();
+// char getUserChoice();
+// void showChoice(char);
+// void winner(char, char);
 
 int main(int argc, char *argv[]) {
-
+  bool playAgain{true};
   start();
-  // make player choose
-  char player{getUserChoice()};
-  std::cout << "you choose     : ";
-  showChoice(player);
 
-  // make computer choose
-  char computer{getComp()};
-  std::cout << "computer choose: ";
-  showChoice(computer);
+  while (playAgain) {
+    // make player choose
+    char player{getUserChoice()};
+    std::cout << "\nyou choose     : ";
+    showChoice(player);
 
-  // print who is win
-  winner(player, computer);
+    // make computer choose
+    char computer{getComp()};
+    std::cout << "computer choose: ";
+    showChoice(computer);
+
+    // print who is win
+    winner(player, computer);
+    playAgain = restartGame();
+  }
+
+  std::cout << "\nThanks for playing, Goodbye!!\n";
 
   return 0;
 }
